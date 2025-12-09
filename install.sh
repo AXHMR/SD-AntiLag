@@ -4,6 +4,7 @@ set -e
 APP_NAME="SD-AntiLag"
 BINARY_NAME="SD-AntiLag"
 ICON_NAME="sd-antilag.svg"
+UNINSTALL_NAME="uninstall.sh"
 
 REPO_OWNER="AXHMR"
 REPO_NAME="SD-AntiLag"
@@ -22,17 +23,24 @@ echo
 
 mkdir -p "$APP_DIR"
 
+# Download binary
 echo "Downloading application..."
 curl -fL "$RELEASE_BASE_URL/$BINARY_NAME" -o "$APP_DIR/$BINARY_NAME"
 chmod +x "$APP_DIR/$BINARY_NAME"
 
+# Download icon
 ICON_PATH="$APP_DIR/$ICON_NAME"
 if curl -fL "$RELEASE_BASE_URL/$ICON_NAME" -o "$ICON_PATH"; then
   :
 else
-  echo "⚠Icon download failed, using generic icon."
+  echo "Icon download failed, using generic icon."
   ICON_PATH="drive-harddisk"
 fi
+
+UNINSTALL_PATH="$APP_DIR/$UNINSTALL_NAME"
+echo "Downloading uninstall script..."
+curl -fL "$RELEASE_BASE_URL/$UNINSTALL_NAME" -o "$UNINSTALL_PATH"
+chmod +x "$UNINSTALL_PATH"
 
 mkdir -p "$DESKTOP_DIR"
 mkdir -p "$LAUNCHER_DIR"
@@ -60,5 +68,6 @@ fi
 
 echo
 echo "$APP_NAME installed successfully!"
-echo "App installed to: $APP_DIR"
-echo "Desktop icon created"
+echo "App installed to: $APP_DIR/$BINARY_NAME"
+echo "Desktop shortcut created"
+echo "Uninstall script available at: $APP_DIR/$UNINSTALL_NAME"
