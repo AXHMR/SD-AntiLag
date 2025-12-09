@@ -8,8 +8,9 @@ UNINSTALL_NAME="uninstall.sh"
 
 REPO_OWNER="AXHMR"
 REPO_NAME="SD-AntiLag"
+TAG="v1.0.0"
 
-RELEASE_BASE_URL="https://github.com/$REPO_OWNER/$REPO_NAME/releases/latest/download"
+RELEASE_BASE_URL="https://github.com/$REPO_OWNER/$REPO_NAME/releases/download/$TAG"
 
 APP_DIR="$HOME/$APP_NAME"
 DESKTOP_DIR="$HOME/Desktop"
@@ -23,12 +24,10 @@ echo
 
 mkdir -p "$APP_DIR"
 
-# Download binary
 echo "Downloading application..."
 curl -fL "$RELEASE_BASE_URL/$BINARY_NAME" -o "$APP_DIR/$BINARY_NAME"
 chmod +x "$APP_DIR/$BINARY_NAME"
 
-# Download icon
 ICON_PATH="$APP_DIR/$ICON_NAME"
 if curl -fL "$RELEASE_BASE_URL/$ICON_NAME" -o "$ICON_PATH"; then
   :
