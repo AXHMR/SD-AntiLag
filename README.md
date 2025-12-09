@@ -33,7 +33,4 @@ The app features a simple GUI, adjustable write intervals, and an optional backg
 3. Run:
 
 ```bash
-git clone https://github.com/AXHMR/SD-AntiLag.git
-cd SD-AntiLag
-chmod +x install.sh
-./install.sh
+curl -fsSL https://raw.githubusercontent.com/AXHMR/SD-AntiLag/main/install.sh | bash
