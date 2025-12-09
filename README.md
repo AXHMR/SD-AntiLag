@@ -2,7 +2,7 @@
 
 **SD-AntiLag** is a lightweight SteamOS utility that helps reduce SD card stutter by periodically writing a small file to the SD card, preventing aggressive power-saving stalls.
 
-It was originally built for the **ROG Ally X**, but _should_ work on other devices running SteamOS (including the Steam Deck and similar non-Valve handhelds).
+It was originally built for the **ROG Ally X**, but _should_ work on other devices running Steam OS (including the Steam Deck and similar non-Valve handhelds).
 
 The app features a simple GUI, adjustable write intervals, and an optional background service that can persist across reboots — all **without requiring sudo or Python installs**.
 
