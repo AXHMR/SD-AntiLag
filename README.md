@@ -102,6 +102,8 @@ At some point in the near future, I hope to be able to turn this all into a supe
 ## Acknowledgements
 Inspired by community research into SD card power-saving behavior on modern handhelds running Steam OS. - Thank you [Ardetis](https://github.com/Ardetis)!
 
+SD-Card/Icon.SVG - modified _(slightly)_/Colour change by me, [made by Nugraha Jati Utama](https://dribbble.com/nugrahajatiutama) - Thank you! (License: CC Attribution.)
+
 Being the car nerd I am, I named this app "SD-AntiLag" because I feel the application does something similar to what Anti-Lag does in a car, keeps things going so you don't have to wait!
 
 While this app was created with the ROG Ally X in mind, It _SHOULD_ work on most _(if not all)_ devices running Steam OS. **If** you happen to try this on another device, please let me know, and I will work of building out a list.
